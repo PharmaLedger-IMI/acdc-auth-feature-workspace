@@ -231,7 +231,7 @@
                 {
                     "type": "copy",
                     "src": "./tmp/package.json",
-                    "target": "./authentication-feature-template",
+                    "target": "./authentication-feature-template/package.json",
                     "options": {
                         "overwrite": true
                     }

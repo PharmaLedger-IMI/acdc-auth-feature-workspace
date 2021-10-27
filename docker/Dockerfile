@@ -7,7 +7,7 @@ RUN npm install -g node-gyp
 #WORKDIR /home/pharmaledger
 
 ENV TARGET_FOLDER_NAME="acdc-workspace"
-RUN git clone https://github.com/PharmaLedger-IMI/acdc-workspace.git $TARGET_FOLDER_NAME
+RUN git clone https://github.com/PharmaLedger-IMI/auth-feature-workspace.git $TARGET_FOLDER_NAME
 
 RUN cd $TARGET_FOLDER_NAME && \
     npm install --unsafe-perm

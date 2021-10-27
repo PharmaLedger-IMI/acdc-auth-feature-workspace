@@ -1,5 +1,5 @@
 #!/bin/bash
-UCNAME="acdc-workspace"
+UCNAME="auth-feature-workspace"
 
 docker run --detach \
     --hostname $UCNAME \

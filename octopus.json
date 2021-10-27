@@ -76,6 +76,25 @@
             ]
         },
         {
+            "name": "gtin-resolver",
+            "src": "https://github.com/PharmaLedger-IMI/gtin-resolver.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd gtin-resolver && npm install"
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd gtin-resolver && npm run build"
+                }
+            ]
+        },
+        {
             "name": "apihub-root/dsu-explorer/loader",
             "src": "https://github.com/PrivateSky/trust-loader.git",
             "actions": [

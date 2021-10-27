@@ -1,4 +1,4 @@
 #!/bin/bash
 
-UCNAME="acdc-workspace"
+UCNAME="auth-feature-workspace"
 docker stop $UCNAME

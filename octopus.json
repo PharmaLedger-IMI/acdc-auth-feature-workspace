@@ -107,8 +107,14 @@
             ]
         },
         {
-            "name": "native integration",
+            "name": "native-integration",
+            "src": "https://github.com/PharmaLedger-IMI/native-integration.git",
             "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
                 {
                     "type": "execute",
                     "cmd": "cd native-integration && npm install && npm run prebuild"

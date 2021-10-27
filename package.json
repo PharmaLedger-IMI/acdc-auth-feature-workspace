@@ -27,7 +27,9 @@
     "clean-build": "npm run clean && npm run build privatesky && npm run build-all",
     "freeze": "node ./node_modules/octopus/scripts/freeze dependencies",
     "incversion": "npm --no-git-tag-version version patch",
-    "set-up-acdc-integration": "node ./bin/build-configs.js"
+    "set-up-acdc-integration": "node ./bin/build-configs.js",
+    "integrate-acdc": "node ./node_modules/octopus/scripts/setEnv --file=../../../env.json \"node ./node_modules/octopus/scripts/run configure-acdc-integration\"",
+    "patch-mobile": "node ./node_modules/octopus/scripts/setEnv --file=../../../env.json \"node ./node_modules/octopus/scripts/run patch-for-ios\""
   },
   "repository": {
     "type": "git",

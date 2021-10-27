@@ -23,8 +23,7 @@ pdm-web-components/node_modules
 pdm-web-components/dist
 pdm-web-components/www
 
-native-integration/node_modules
-native-integration/build/bundles
+native-integration
 
 mobile/scan-app
 privatesky

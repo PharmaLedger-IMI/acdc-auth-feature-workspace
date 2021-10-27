@@ -47,3 +47,26 @@
     
     keep compatibility with inner ssApps hosted in wallets
     send the load complete event from ssapp
+    [Freeze]
+    
+    - @webcardinal-core
+    #Fix for leaflet ssapp webcardinal migration
+    Github Actions update(Build 311)
+    Merge pull request #11 from Mastaleru/master
+    
+    keep compatibility with inner ssApps hosted in wallets
+    send the load complete event from ssapp
+    refs #1 - should be done
+    Update COMPATIBILITY.md
+    [Freeze]
+    
+    - @webcardinal-core
+    #Fix for leaflet ssapp webcardinal migration
+    Github Actions update(Build 311)
+    Merge pull request #11 from Mastaleru/master
+    
+    keep compatibility with inner ssApps hosted in wallets
+    fixed createMarketplace swarm
+    send the load complete event from ssapp
+    refs #1 - should be done
+    Update COMPATIBILITY.md

@@ -60,6 +60,22 @@
             ]
         },
         {
+            "name": "themes/blue-fluorite-theme",
+            "src": "https://github.com/PrivateSky/blue-fluorite-theme.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false,
+                    "commit": "7dfa8dd6bd13239b698e0bd1a71e0aa353e16ba2"
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd themes/blue-fluorite-theme && npm install"
+                }
+            ]
+        },
+        {
             "name": "apihub-root/dsu-explorer/loader",
             "src": "https://github.com/PrivateSky/trust-loader.git",
             "actions": [
@@ -79,6 +95,21 @@
                     "options": {
                         "overwrite": true
                     }
+                }
+            ]
+        },
+        {
+            "name": "dossier-explorer-wallet-prototype",
+            "src": "https://github.com/PrivateSky/dossier-explorer-wallet-prototype.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd dossier-explorer-wallet-prototype && npm install"
                 }
             ]
         },
@@ -154,6 +185,16 @@
                 {
                     "type": "execute",
                     "cmd": "cd webcardinal && npm run build-dossier"
+                }
+            ]
+        },
+        {
+            "name": "blue-fluorite-theme-wallet-build",
+            "src": "",
+            "actions": [
+                {
+                    "type": "execute",
+                    "cmd": "cd themes/blue-fluorite-theme && npm run build-dossier"
                 }
             ]
         },

@@ -13,29 +13,10 @@
     "bricking",
     "anchoring",
     "dsu-wizard",
-    "gtin-dsu-wizard",
-    "acdc-reporting",
-    "epi-mapping-engine",
-    "epi-mapping-engine-results",
     "debugLogger",
     "staticServer"
   ],
   "componentsConfig": {
-    "epi-mapping-engine": {
-      "module": "./../../epi-utils",
-      "function": "getEPIMappingEngineForAPIHUB"
-    },
-    "epi-mapping-engine-results": {
-      "module": "./../../epi-utils",
-      "function": "getEPIMappingEngineMessageResults"
-    },
-    "acdc-reporting": {
-      "module": "./../../reporting-service/middleware",
-      "function": "Init"
-    },
-    "gtin-dsu-wizard": {
-      "module": "./../../gtin-dsu-wizard"
-    },
     "bricking": {},
     "anchoring": {}
   },
@@ -43,9 +24,6 @@
   "enableJWTAuthorisation": false,
   "enableLocalhostAuthorization": false,
   "skipJWTAuthorisation": [
-    "/assets",
-    "/leaflet-wallet",
-    "/dsu-fabric-wallet",
     "/directory-summary",
     "/resources",
     "/bdns",

@@ -26,7 +26,8 @@
     "clean": "node ./bin/clean.js ./",
     "clean-build": "npm run clean && npm run build privatesky && npm run build-all",
     "freeze": "node ./node_modules/octopus/scripts/freeze dependencies",
-    "incversion": "npm --no-git-tag-version version patch"
+    "incversion": "npm --no-git-tag-version version patch",
+    "set-up-acdc-integration": "node ./bin/build-configs.js"
   },
   "repository": {
     "type": "git",

@@ -79,6 +79,25 @@
             ]
         },
         {
+            "name": "gtin-resolver",
+            "src": "https://github.com/PharmaLedger-IMI/gtin-resolver.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd gtin-resolver && npm install"
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd gtin-resolver && npm run build"
+                }
+            ]
+        },
+        {
             "name": "apihub-root/dsu-explorer/loader",
             "src": "https://github.com/PrivateSky/trust-loader.git",
             "actions": [
@@ -176,6 +195,49 @@
             ]
         }
     ],
+    "patch-for-ios": [
+        {
+            "name": "patch auth feature ssapp",
+            "actions": [
+                {
+                    "type": "copy",
+                    "src": "patches/auth-feature-patch/code",
+                    "target": "authentication-feature-template/src/code",
+                    "options": {
+                        "overwrite": true
+                    }
+                }
+            ]
+        }
+    ],
+    "configure-acdc-integration": [
+        {
+            "name": "configure server integration",
+            "src": "",
+            "actions": [
+                {
+                    "type": "execute",
+                    "cmd": "npm run set-up-acdc-integration -- --port=8081 --domainName=template --epi=http://localhost:8080 --env=dev"
+                },
+                {
+                    "type": "copy",
+                    "src": "./tmp/external-volume",
+                    "target": "./apihub-root/external-volume",
+                    "options": {
+                        "overwrite": true
+                    }
+                },
+                {
+                    "type": "copy",
+                    "src": "./tmp/package.json",
+                    "target": "./authentication-feature-template",
+                    "options": {
+                        "overwrite": true
+                    }
+                }
+            ]
+        }
+    ],
     "build": [
         {
             "name": "cardinal-wallet-build",
@@ -267,19 +329,6 @@
             ]
         },
         {
-            "name": "patch auth feature ssapp",
-            "actions": [
-                {
-                    "type": "copy",
-                    "src": "patches/auth-feature-patch/code",
-                    "target": "authentication-feature-template/src/code",
-                    "options": {
-                        "overwrite": true
-                    }
-                }
-            ]
-        },
-        {
             "name": "Build acdc Authentication Feature template",
             "src": "",
             "actions": [
@@ -304,3 +353,9 @@
         }
     ]
 }
+
+
+
+
+
+

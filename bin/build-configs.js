@@ -28,7 +28,8 @@ const argParser = function(defaultOpts, args){
 const defaultOps = {
     domainName: "epi-auth-template",
     epi: "http://localhost:8080",
-    port: 8081
+    port: 8081,
+    env: 'dev'
 }
 
 const conf = argParser(defaultOps, process.argv);

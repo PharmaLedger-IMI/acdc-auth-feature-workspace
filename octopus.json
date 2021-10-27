@@ -187,6 +187,49 @@
             ]
         }
     ],
+    "patch-for-ios": [
+        {
+            "name": "patch auth feature ssapp",
+            "actions": [
+                {
+                    "type": "copy",
+                    "src": "patches/auth-feature-patch/code",
+                    "target": "authentication-feature-template/src/code",
+                    "options": {
+                        "overwrite": true
+                    }
+                }
+            ]
+        }
+    ],
+    "configure-acdc-integration": [
+        {
+            "name": "configure server integration",
+            "src": "",
+            "actions": [
+                {
+                    "type": "execute",
+                    "cmd": "npm run set-up-acdc-integration -- --port=8081 --domainName=template --epi=http://localhost:8080 --env=dev"
+                },
+                {
+                    "type": "copy",
+                    "src": "./tmp/external-volume",
+                    "target": "./apihub-root/external-volume",
+                    "options": {
+                        "overwrite": true
+                    }
+                },
+                {
+                    "type": "copy",
+                    "src": "./tmp/package.json",
+                    "target": "./authentication-feature-template",
+                    "options": {
+                        "overwrite": true
+                    }
+                }
+            ]
+        }
+    ],
     "build": [
         {
             "name": "cardinal-wallet-build",
@@ -274,19 +317,6 @@
                 {
                     "type": "execute",
                     "cmd": "cd pdm-web-components && npm run build"
-                }
-            ]
-        },
-        {
-            "name": "patch auth feature ssapp",
-            "actions": [
-                {
-                    "type": "copy",
-                    "src": "patches/auth-feature-patch/code",
-                    "target": "authentication-feature-template/src/code",
-                    "options": {
-                        "overwrite": true
-                    }
                 }
             ]
         },

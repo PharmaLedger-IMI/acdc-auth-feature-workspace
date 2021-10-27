@@ -35,54 +35,6 @@
       "$ORIGIN"
     ]
   },
-  "epidev": {
-    "replicas": [],
-    "brickStorages": [
-      "$ORIGIN"
-    ],
-    "anchoringServices": [
-      "$ORIGIN"
-    ],
-    "notifications": [
-      "$ORIGIN"
-    ]
-  },
-  "mah1.epidev": {
-    "replicas": [],
-    "brickStorages": [
-      "$ORIGIN"
-    ],
-    "anchoringServices": [
-      "$ORIGIN"
-    ],
-    "notifications": [
-      "$ORIGIN"
-    ]
-  },
-  "mah2.epidev": {
-    "replicas": [],
-    "brickStorages": [
-      "$ORIGIN"
-    ],
-    "anchoringServices": [
-      "$ORIGIN"
-    ],
-    "notifications": [
-      "$ORIGIN"
-    ]
-  },
-  "epiqa": {
-    "replicas": [],
-    "brickStorages": [
-      "$ORIGIN"
-    ],
-    "anchoringServices": [
-      "$ORIGIN"
-    ],
-    "notifications": [
-      "$ORIGIN"
-    ]
-  },
   "vault": {
     "replicas": [],
     "brickStorages": [
@@ -94,17 +46,5 @@
     "notifications": [
       "$ORIGIN"
     ]
-  },
-    "vault.nvs": {
-      "replicas": [],
-      "brickStorages": [
-        "$ORIGIN"
-      ],
-      "anchoringServices": [
-        "$ORIGIN"
-      ],
-      "notifications": [
-        "$ORIGIN"
-      ]
-    }
+  }
 }

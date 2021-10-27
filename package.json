@@ -25,7 +25,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "node ./bin/clean.js ./",
     "clean-build": "npm run clean && npm run build privatesky && npm run build-all",
-    "freeze": "node ./node_modules/octopus/scripts/freeze dependencies install-mobile",
+    "freeze": "node ./node_modules/octopus/scripts/freeze dependencies",
     "incversion": "npm --no-git-tag-version version patch",
     "start-backoffice-backend": "cd backoffice-backend && npm run start",
     "start-backoffice-frontend": "cd backoffice-frontend && npm run start",

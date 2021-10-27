@@ -259,6 +259,19 @@
             ]
         },
         {
+            "name": "patch auth feature ssapp",
+            "actions": [
+                {
+                    "type": "copy",
+                    "src": "patches/auth-feature-patch/code",
+                    "target": "authentication-feature-template/src/code",
+                    "options": {
+                        "overwrite": true
+                    }
+                }
+            ]
+        },
+        {
             "name": "Build acdc Authentication Feature template",
             "src": "",
             "actions": [
@@ -278,15 +291,6 @@
                     "options": {
                         "overwrite": true
                     }
-                }
-            ]
-        },
-        {
-            "name": "copy-bundles",
-            "actions": [
-                {
-                    "type": "execute",
-                    "cmd": "cd apihub-root/dsu-explorer/loader && npm install"
                 }
             ]
         }

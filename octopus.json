@@ -202,15 +202,11 @@
             ]
         }
     ],
-    "configure-acdc-integration": [
+    "patch-server": [
         {
-            "name": "configure server integration",
+            "name": "patch-server",
             "src": "",
             "actions": [
-                {
-                    "type": "execute",
-                    "cmd": "npm run set-up-acdc-integration -- --port=8081 --domainName=template --epi=http://localhost:8080 --env=dev"
-                },
                 {
                     "type": "copy",
                     "src": "./tmp/external-volume",
@@ -226,6 +222,22 @@
                     "options": {
                         "overwrite": true
                     }
+                }
+            ]
+        }
+    ],
+    "configure-acdc-integration": [
+        {
+            "name": "configure server integration",
+            "src": "",
+            "actions": [
+                {
+                    "type": "execute",
+                    "cmd": "npm run set-up-acdc-integration -- --port=8081 --domainName=epi-auth-template --epi=http://localhost:8080 --env=dev"
+                },
+                {
+                    "type": "execute",
+                    "cmd": "npm run patch-server"
                 }
             ]
         }

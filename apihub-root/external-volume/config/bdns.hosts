@@ -14,6 +14,18 @@
   "epi": {
     "replicas": [],
     "brickStorages": [
+      "http://localhost:8080"
+    ],
+    "anchoringServices": [
+      "http://localhost:8080"
+    ],
+    "notifications": [
+      "http://localhost:8080"
+    ]
+  },
+  "template": {
+    "replicas": [],
+    "brickStorages": [
       "$ORIGIN"
     ],
     "anchoringServices": [

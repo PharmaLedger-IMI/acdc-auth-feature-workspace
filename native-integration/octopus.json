@@ -1,25 +1,6 @@
 {
   "workDir": ".",
   "dependencies": [],
-  "prebuild": [
-    {
-      "name": "Bundles",
-      "src": "",
-      "actions": [
-        {
-          "type": "execute",
-          "cmd": "node ../privatesky/psknode/bin/scripts/pskbuild.js --projectMap=./build/build.json  --prod=true --output=./build/bundles/default"
-        },
-        {
-          "type": "execute",
-          "cmd": "node ../privatesky/psknode/bin/scripts/pskbuild.js --projectMap=./build/build_ios.json  --prod=true --output=./build/bundles/ios"
-        },
-        {
-          "type": "remove",
-          "target": "./builds"
-        }]
-    }
-  ],
   "docs": [
     {
       "name": "Documentation Theme Install (globally)",

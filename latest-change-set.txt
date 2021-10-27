@@ -29,3 +29,21 @@
     [Freeze]
     
     - @webcardinal-core
+    [Freeze]
+    
+    - @webcardinal-core
+    #Fix for leaflet ssapp webcardinal migration
+    Github Actions update(Build 311)
+    Merge pull request #11 from Mastaleru/master
+    
+    keep compatibility with inner ssApps hosted in wallets
+    send the load complete event from ssapp
+    [Freeze]
+    
+    - @webcardinal-core
+    #Fix for leaflet ssapp webcardinal migration
+    Github Actions update(Build 311)
+    Merge pull request #11 from Mastaleru/master
+    
+    keep compatibility with inner ssApps hosted in wallets
+    send the load complete event from ssapp

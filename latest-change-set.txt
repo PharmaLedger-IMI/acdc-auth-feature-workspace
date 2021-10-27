@@ -26,3 +26,6 @@
     fixing the build
     Update EthAdapter.yaml
     Change view results button label and fix update product
+    [Freeze]
+    
+    - @webcardinal-core

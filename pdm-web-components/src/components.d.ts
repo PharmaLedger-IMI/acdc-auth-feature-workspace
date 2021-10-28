@@ -6,6 +6,16 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface MultiSpinner {
+        "type"?: string;
+    }
+    interface PdmBarcodeScanner {
+        "compatibilityMode"?: string;
+        "data": any;
+        "loaderType"?: string;
+        "switchCamera": () => Promise<void>;
+        "timeout"?: number;
+    }
     interface PdmBarcodeScannerController {
         "barcodeTitle"?: string;
         "changeCamera": () => Promise<void>;
@@ -22,6 +32,18 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLMultiSpinnerElement extends Components.MultiSpinner, HTMLStencilElement {
+    }
+    var HTMLMultiSpinnerElement: {
+        prototype: HTMLMultiSpinnerElement;
+        new (): HTMLMultiSpinnerElement;
+    };
+    interface HTMLPdmBarcodeScannerElement extends Components.PdmBarcodeScanner, HTMLStencilElement {
+    }
+    var HTMLPdmBarcodeScannerElement: {
+        prototype: HTMLPdmBarcodeScannerElement;
+        new (): HTMLPdmBarcodeScannerElement;
+    };
     interface HTMLPdmBarcodeScannerControllerElement extends Components.PdmBarcodeScannerController, HTMLStencilElement {
     }
     var HTMLPdmBarcodeScannerControllerElement: {
@@ -35,11 +57,30 @@ declare global {
         new (): HTMLSsappWindowElement;
     };
     interface HTMLElementTagNameMap {
+        "multi-spinner": HTMLMultiSpinnerElement;
+        "pdm-barcode-scanner": HTMLPdmBarcodeScannerElement;
         "pdm-barcode-scanner-controller": HTMLPdmBarcodeScannerControllerElement;
         "ssapp-window": HTMLSsappWindowElement;
     }
 }
 declare namespace LocalJSX {
+    interface MultiSpinner {
+        "type"?: string;
+    }
+    interface PdmBarcodeScanner {
+        "compatibilityMode"?: string;
+        "data"?: any;
+        "loaderType"?: string;
+        /**
+          * Through this event data is passed
+         */
+        "onSsapp-action"?: (event: CustomEvent<any>) => void;
+        /**
+          * Through this event errors are passed
+         */
+        "onSsapp-send-error"?: (event: CustomEvent<any>) => void;
+        "timeout"?: number;
+    }
     interface PdmBarcodeScannerController {
         "barcodeTitle"?: string;
         "scannerMode"?: string;
@@ -52,6 +93,8 @@ declare namespace LocalJSX {
         "seed"?: string;
     }
     interface IntrinsicElements {
+        "multi-spinner": MultiSpinner;
+        "pdm-barcode-scanner": PdmBarcodeScanner;
         "pdm-barcode-scanner-controller": PdmBarcodeScannerController;
         "ssapp-window": SsappWindow;
     }
@@ -60,6 +103,8 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "multi-spinner": LocalJSX.MultiSpinner & JSXBase.HTMLAttributes<HTMLMultiSpinnerElement>;
+            "pdm-barcode-scanner": LocalJSX.PdmBarcodeScanner & JSXBase.HTMLAttributes<HTMLPdmBarcodeScannerElement>;
             "pdm-barcode-scanner-controller": LocalJSX.PdmBarcodeScannerController & JSXBase.HTMLAttributes<HTMLPdmBarcodeScannerControllerElement>;
             "ssapp-window": LocalJSX.SsappWindow & JSXBase.HTMLAttributes<HTMLSsappWindowElement>;
         }

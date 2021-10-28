@@ -239,6 +239,14 @@
                     "options": {
                         "overwrite": true
                     }
+                },
+                {
+                    "type": "copy",
+                    "src": "./tmp/env.json",
+                    "target": "./env.json",
+                    "options": {
+                        "overwrite": true
+                    }
                 }
             ]
         }

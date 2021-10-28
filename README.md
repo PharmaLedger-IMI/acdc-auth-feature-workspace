@@ -58,6 +58,14 @@ this will run the following octopus script:
 
 notice the use of ```npm run set-up-acdc-integration``` with arguments to configure the domain
 
+the possible arguments are:
+ - --port : the port where to run the ApiHub (defaults to 8080);
+ - --domainName: the name for the domain (defaults to 'template');
+ - --epi: the url to the epi (acdc for the time being) apihub: ```acdc-dev.pharmaledger.pdmfc.com:80``` or ```acdc.pharmaledger.pdmfc.com:80``` for the dev and tst environments. local address for tests. (no outgoing communication is required so far for this repo, so this parameter is mute);
+ - --env: (not supported currently);
+
+Each user should tailor this to fit his needs.
+
 ```sh
 $ npm run server
 ```
@@ -76,7 +84,16 @@ Open a new console inside *acdc-auth-feature-workspace* folder and run:
 $ npm run build-all
 ```
 
+### To Test Locally:
+To properly test the deployment locally, the best way is to deploy this workspace to a docker file ```./docker/build.sh``` and
+then run it ```./docker/run.sh```.
+this latest script will map the 8080 port of the container to 8081 so it can run simultaneous to acdc.
 
+then, in acdc, when all the workspace is set up stop the server and run ```npm run onboard-domain -- --domainName=$DOMAIN_NAME --anchoring=http://localhost:8081 --bricking=http://localhost:8081 --notifications=http://localhost:8081```
+
+restart the server ```npm-run-server```
+
+and now the KeySSI generated in this workspace can be used in the acdc workspace (easy test via Dossier Explorer or by using it in the EPI app)
 
 # Contributions
 

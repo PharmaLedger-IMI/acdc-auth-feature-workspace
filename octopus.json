@@ -233,11 +233,15 @@
             "actions": [
                 {
                     "type": "execute",
-                    "cmd": "npm run set-up-acdc-integration -- --port=8080 --domainName=epi-auth-template --epi=http://localhost:8080 --env=dev"
+                    "cmd": "npm run set-up-acdc-integration -- --port=8080 --domainName=epi-auth-template --epi=http://192.168.1.89:8080 --env=dev"
                 },
                 {
                     "type": "execute",
                     "cmd": "npm run patch-server"
+                },
+                {
+                    "type": "execute",
+                    "cmd": "npx rimraf ./apihub-root/external-volume/config/domains/epi.json"
                 }
             ]
         }

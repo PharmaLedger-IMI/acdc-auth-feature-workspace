@@ -30,7 +30,8 @@
     "set-up-acdc-integration": "node ./bin/build-configs.js",
     "integrate-acdc": "node ./node_modules/octopus/scripts/setEnv --file=../../../env.json \"node ./node_modules/octopus/scripts/run configure-acdc-integration\"",
     "patch-mobile": "node ./node_modules/octopus/scripts/setEnv --file=../../../env.json \"node ./node_modules/octopus/scripts/run patch-for-ios\"",
-    "patch-server": "node ./node_modules/octopus/scripts/setEnv --file=../../../env.json \"node ./node_modules/octopus/scripts/run patch-server\""
+    "patch-server": "node ./node_modules/octopus/scripts/setEnv --file=../../../env.json \"node ./node_modules/octopus/scripts/run patch-server\"",
+    "onboard-domain": "node ./bin/onboard-domain.js"
   },
   "repository": {
     "type": "git",

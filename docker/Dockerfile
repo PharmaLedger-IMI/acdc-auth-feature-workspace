@@ -11,8 +11,7 @@ RUN git clone https://github.com/PharmaLedger-IMI/acdc-auth-feature-workspace.gi
 
 RUN cd $TARGET_FOLDER_NAME && \
     npm install --unsafe-perm  && \
-    npm run integrate-acdc && \
-    npm run patch-server
+    npm run integrate-acdc
 
 #RUN cd $TARGET_FOLDER_NAME && \
 #    npm run dev-install

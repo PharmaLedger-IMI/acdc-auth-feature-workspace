@@ -233,7 +233,7 @@
             "actions": [
                 {
                     "type": "execute",
-                    "cmd": "npm run set-up-acdc-integration -- --port=8081 --domainName=epi-auth-template --epi=http://localhost:8080 --env=dev"
+                    "cmd": "npm run set-up-acdc-integration -- --port=8080 --domainName=epi-auth-template --epi=http://localhost:8080 --env=dev"
                 },
                 {
                     "type": "execute",

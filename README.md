@@ -91,7 +91,7 @@ this latest script will map the 8080 port of the container to 8081 so it can run
 
 then, in acdc, when all the workspace is set up stop the server and run ```npm run onboard-domain -- --domainName=$DOMAIN_NAME --anchoring=http://localhost:8081 --bricking=http://localhost:8081 --notifications=http://localhost:8081```
 
-restart the server ```npm-run-server```
+restart the server ```npm run server```
 
 and now the KeySSI generated in this workspace can be used in the acdc workspace (easy test via Dossier Explorer or by using it in the EPI app)
 

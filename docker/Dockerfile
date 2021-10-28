@@ -10,7 +10,7 @@ ENV TARGET_FOLDER_NAME="acdc-auth-feature-workspace"
 RUN git clone https://github.com/PharmaLedger-IMI/acdc-auth-feature-workspace.git $TARGET_FOLDER_NAME
 
 RUN cd $TARGET_FOLDER_NAME && \
-    npm install --unsafe-perm \
+    npm install --unsafe-perm  && \
     npm run integrate-acdc && \
     npm run patch-server
 

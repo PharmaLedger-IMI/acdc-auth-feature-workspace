@@ -1,6 +1,6 @@
 {
   "storage": "../apihub-root",
-  "port": 8081,
+  "port": 8080,
   "preventRateLimit": true,
   "activeComponents": [
     "virtualMQ",
@@ -27,7 +27,7 @@
     "/directory-summary",
     "/resources",
     "/bdns",
-    "/anchor/template",
+    "/anchor/epi",
     "/anchor/default",
     "/anchor/vault",
     "/bricking",

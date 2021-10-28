@@ -1,8 +1,8 @@
 .idea
-cardinal
-webcardinal
-webcardinal/**
-authentication-feature-*
+/cardinal
+/webcardinal
+/webcardinal/**
+/authentication-feature-*
 
 
 apihub-root/dsu-explorer

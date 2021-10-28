@@ -217,8 +217,16 @@
                 },
                 {
                     "type": "copy",
-                    "src": "./tmp/package.json",
-                    "target": "./authentication-feature-template/package.json",
+                    "src": "./tmp/authentication-feature-template",
+                    "target": "./authentication-feature-template",
+                    "options": {
+                        "overwrite": true
+                    }
+                },
+                {
+                    "type": "copy",
+                    "src": "./tmp/webcardinal",
+                    "target": "./webcardinal",
                     "options": {
                         "overwrite": true
                     }

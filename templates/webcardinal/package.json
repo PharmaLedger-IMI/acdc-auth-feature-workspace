@@ -1,0 +1,32 @@
+{
+  "name": "webcardinal-bundler",
+  "version": "1.0.0",
+  "description": "Bundle constructor of WebCardinal.",
+  "scripts": {
+    "bundle-webcardinal": "node node_modules/octopus/scripts/run bundle-webcardinal",
+    "bundle-cardinal": "node node_modules/octopus/scripts/run bundle-cardinal",
+    "bundle-minimal": "node node_modules/octopus/scripts/run bundle-minimal",
+    "bundle-wiki": "node node_modules/octopus/scripts/run bundle-wiki",
+    "bundle-all": "node node_modules/octopus/scripts/run bundle-all",
+    "dev": "node node_modules/octopus/scripts/run build-webcardinal.dev",
+    "build": "node node_modules/octopus/scripts/run build-webcardinal",
+    "release": "node node_modules/octopus/scripts/run bundle-all devmode",
+    "freeze": "node node_modules/octopus/scripts/freeze bundle-webcardinal bundle-cardinal bundle-minimal bundle-wiki bundle-all",
+    "clean": "rm -rf .webcardinal/ webcardinal/",
+    "build-dossier": "node ./node_modules/octopus/scripts/buildDossier.js --bundles=./../privatesky/psknode/bundles --domain=${domainName}"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "octopus": "git+https://github.com/PrivateSky/octopus.git"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webcardinal/webcardinal-bundler.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/webcardinal/webcardinal-bundler/issues"
+  },
+  "homepage": "https://github.com/webcardinal/webcardinal-bundler#readme"
+}

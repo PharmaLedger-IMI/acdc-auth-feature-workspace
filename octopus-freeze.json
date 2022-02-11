@@ -9,7 +9,7 @@
                     "type": "smartClone",
                     "target": ".",
                     "collectLog": false,
-                    "commit": "a7b8c9950c67a21771f8a5f2fe02ed4e08d03a8b"
+                    "commit": "b7640b60cf0928e4a42547f243cf7d98b7da13ef"
                 },
                 {
                     "type": "execute",
@@ -39,13 +39,13 @@
         },
         {
             "name": "privatesky",
-            "src": "http://github.com/privatesky/privatesky.git",
+            "src": "http://github.com/privatesky/psk-release.git",
             "actions": [
                 {
                     "type": "smartClone",
                     "target": ".",
                     "collectLog": false,
-                    "commit": "7955152325022430f5af82ac2cc5dc29192f8828"
+                    "commit": "3c8d9643e57f0f85dbe5a356f2219f743c2021b7"
                 },
                 {
                     "type": "execute",
@@ -106,7 +106,7 @@
                     "type": "smartClone",
                     "target": ".",
                     "collectLog": false,
-                    "commit": "22d83ceacf62b9dcf0a7f70bc543ad0986d4226a"
+                    "commit": "40c87b51336b7a160672731472785681830f10fe"
                 },
                 {
                     "type": "execute",
@@ -146,7 +146,7 @@
                     "type": "smartClone",
                     "target": ".",
                     "collectLog": false,
-                    "commit": "4c4654fab88439ea9a57b28b83eba798e46f205a"
+                    "commit": "6e7bed56f5c040908c32c099f5dd2a313fb1652c"
                 },
                 {
                     "type": "execute",
@@ -186,8 +186,7 @@
                 {
                     "type": "smartClone",
                     "target": ".",
-                    "collectLog": false,
-                    "commit": "7a1d4541a9af2840ca72c414cfd621c994e2c8ba"
+                    "collectLog": false
                 },
                 {
                     "type": "execute",
@@ -386,4 +385,3 @@
         }
     ]
 }
-

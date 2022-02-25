@@ -26,6 +26,24 @@ $ npm install
 
 ### Step 2: Launch the "server"
 
+```sh
+$ npm run server
+```
+
+At the end of this command you get something similar to:
+
+![alt text](scr-npm-run-server.png)
+
+
+### Step 3: Build all things needed for the application to run.
+
+Open a new console inside *acdc-auth-feature-workspace* folder and run:
+
+```sh
+# Note: Run this in a new console inside "epi-workspace" folder
+$ npm run build-all
+```
+
 While in the *acdc-auth-feature-workspace* folder run:
 (optional)
 ```shell
@@ -66,24 +84,6 @@ the possible arguments are:
 
 Each user should tailor this to fit his needs.
 
-```sh
-$ npm run server
-```
-
-At the end of this command you get something similar to:
-
-![alt text](scr-npm-run-server.png)
-
-
-### Step 3: Build all things needed for the application to run.
-
-Open a new console inside *acdc-auth-feature-workspace* folder and run:
-
-```sh
-# Note: Run this in a new console inside "epi-workspace" folder
-$ npm run build-all
-```
-
 ### To Test Locally:
 To properly test the deployment locally, the best way is to deploy this workspace to a docker file ```./docker/build.sh``` and
 then run it ```./docker/run.sh```.
@@ -94,6 +94,78 @@ then, in acdc, when all the workspace is set up stop the server and run ```npm r
 restart the server ```npm run server```
 
 and now the KeySSI generated in this workspace can be used in the acdc workspace (easy test via Dossier Explorer or by using it in the EPI app)
+
+### To Publish
+
+#### Option 1 - Deploy to epi servers
+
+ - make sure the domain you are building to when you run build-all (or npm run build in the auth feature folder) is ```epi```
+ - configure bdns to point to the epi ApiHub:
+```json
+  "epi": {
+    "replicas": [],
+    "brickStorages": [
+      "https://epi...:xxxx"
+    ],
+    "anchoringServices": [
+      "https://epi...:xxxx"
+    ],
+    "notifications": [
+      "https://epi...:xxxx"
+    ]
+  },
+```
+ - run your build command
+
+#### Option 2 - Deploy to your own domain (and ApiHub instance)
+
+ - decide the name for your domain, eg ```auth-feature-xxx```
+ - make sure the domain you are building matches the selected name
+ - have a bdns configuration for that domain and epi like so:
+```json
+  "epi": {
+    "replicas": [],
+    "brickStorages": [
+      "https://epi...:xxxx"
+    ],
+    "anchoringServices": [
+      "https://epi...:xxxx"
+    ],
+    "notifications": [
+      "https://epi...:xxxx"
+    ]
+  },
+    "${auth-feature-xxx}": {
+    "replicas": [],
+    "brickStorages": [
+      "$ORIGIN"
+    ],
+    "anchoringServices": [
+      "$ORIGIN"
+    ],
+    "notifications": [
+      "$ORIGIN"
+    ]
+  },
+```
+ - have a domain configuration file ```./aphub-root/external-volume/config/domains/${auth-feature-xxx}.json``` with:
+ ```json
+ {
+  "anchoring": {
+    "type": "FS",
+    "option": {
+      "enableBricksLedger": false
+    },
+    "commands": {
+      "addAnchor": "anchor"
+    }
+  },
+  "skipOAuth": [
+    "/bricking/${auth-feature-xxx}/get-brick"
+  ]
+}
+ ```
+
 
 # Contributions
 
